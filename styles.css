@@ -1,0 +1,81 @@
+.body{
+  background-color: #ffd384;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 14%;
+    float: left;
+    margin:20px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.05);
+  }
+
+  .container1 {
+    padding: 2px 18px;
+    text-align: center;
+  }
+   .my-container {
+
+      position: static;
+      background: #000;
+      overflow: hidden;
+  }
+  .my-container h4{
+      font-size: 45px;
+      font-weight: bold;
+      z-index: 2;
+      position:absolute;
+      color: white;
+
+  }
+  p{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+  }
+  /* OUTER CONTAINER */
+.tcontainer {
+    width: 100%;
+    overflow: hidden; /* Hide scroll bar */
+  }
+
+  /* MIDDLE CONTAINER */
+  .ticker-wrap {
+    width: 100%;
+    padding-left: 100%; /* Push contents to right side of screen */
+  }
+
+  /* INNER CONTAINER */
+  @keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .ticker-move {
+    /* Basically move items from right side of screen to left in infinite loop */
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 30s;
+  }
+  .ticker-move:hover{
+    animation-play-state: paused; /* Pause scroll on mouse hover */
+  }
+
+  /* ITEMS */
+  .ticker-item{
+    display: inline-block; /* Lay items in a horizontal line */
+    padding: 0 2rem;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
